@@ -309,6 +309,71 @@ body, html {
   background: rgba(10, 10, 10, 0.8);
 }
 
+.poem-section {
+  border-left-color: var(--blood-red);
+  background: rgba(139, 0, 0, 0.08);
+  border: 1px solid rgba(139, 0, 0, 0.2);
+  text-align: center;
+  padding: 3rem 2.5rem;
+}
+
+.poem-section:hover {
+  background: rgba(139, 0, 0, 0.12);
+  border-left-color: var(--crimson);
+}
+
+.poem-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  font-style: italic;
+  margin-bottom: 2rem;
+  text-shadow: 
+    2px 2px 4px rgba(0, 0, 0, 0.9),
+    0 0 20px rgba(139, 0, 0, 0.4);
+  font-family: 'Cormorant Garamond', serif;
+  letter-spacing: 0.1em;
+}
+
+.poem-content {
+  text-align: left;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.poem-line {
+  font-size: 1.15rem;
+  line-height: 2.2;
+  color: var(--text-secondary);
+  margin-bottom: 0.8rem;
+  text-align: left;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.9);
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 400;
+  font-style: italic;
+  letter-spacing: 0.02em;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.poem-line::before {
+  content: '❦';
+  position: absolute;
+  left: 0;
+  color: var(--blood-red);
+  opacity: 0.5;
+  font-size: 0.8rem;
+}
+
+.poem-line:last-child {
+  margin-bottom: 0;
+  font-weight: 500;
+  color: var(--text-primary);
+  text-shadow: 
+    2px 2px 4px rgba(0, 0, 0, 0.9),
+    0 0 15px rgba(139, 0, 0, 0.3);
+}
+
 .brown-section {
   border: 2px solid var(--blood-red);
   border-left: 3px solid var(--blood-red);
