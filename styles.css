@@ -25,9 +25,11 @@
 body, html {
   margin: 0;
   padding: 0;
-  font-family: 'Georgia', 'Times New Roman', serif;
+  font-family: 'Cormorant Garamond', 'Georgia', 'Times New Roman', serif;
   overflow-x: hidden;
   background: #000000;
+  font-feature-settings: "liga" 1, "kern" 1;
+  text-rendering: optimizeLegibility;
 }
 
 /* ================== CONTENEDOR PRINCIPAL ================== */
@@ -158,16 +160,19 @@ body, html {
 
 .main-title {
   font-size: 3.5rem;
-  font-weight: 700;
+  font-weight: 900;
   color: var(--text-primary);
   text-transform: uppercase;
-  letter-spacing: 0.3em;
+  letter-spacing: 0.15em;
   margin-bottom: 1rem;
   text-shadow: 
-    2px 2px 4px rgba(0, 0, 0, 0.8),
-    0 0 20px rgba(139, 0, 0, 0.3);
-  font-family: 'Georgia', serif;
+    3px 3px 6px rgba(0, 0, 0, 0.9),
+    1px 1px 2px rgba(139, 0, 0, 0.5),
+    0 0 25px rgba(139, 0, 0, 0.4);
+  font-family: 'Cinzel Decorative', 'Uncial Antiqua', serif;
   position: relative;
+  font-variant: small-caps;
+  text-decoration: none;
 }
 
 .main-title::before,
@@ -182,12 +187,15 @@ body, html {
 }
 
 .subtitle {
-  font-size: 1rem;
+  font-size: 1.1rem;
   color: var(--text-dim);
   font-style: italic;
-  letter-spacing: 0.2em;
+  letter-spacing: 0.25em;
   text-transform: lowercase;
   margin-top: 1rem;
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 400;
+  font-variant: normal;
 }
 
 /* ================== SECCIONES ================== */
@@ -337,13 +345,19 @@ body, html {
 }
 
 .carta-text {
-  font-size: 1.15rem;
-  line-height: 1.9;
+  font-size: 1.2rem;
+  line-height: 2;
   color: var(--text-secondary);
   margin-bottom: 1.5rem;
   text-align: justify;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
-  font-family: 'Georgia', serif;
+  text-shadow: 
+    1px 1px 2px rgba(0, 0, 0, 0.9),
+    0.5px 0.5px 1px rgba(139, 0, 0, 0.2);
+  font-family: 'Cormorant Garamond', 'Georgia', serif;
+  font-weight: 400;
+  letter-spacing: 0.03em;
+  font-feature-settings: "liga" 1, "kern" 1, "swsh" 1;
+  text-rendering: optimizeLegibility;
 }
 
 .carta-text:last-child {
@@ -390,14 +404,17 @@ body, html {
 
 .love-word {
   font-size: 1.8rem;
-  font-weight: 700;
+  font-weight: 600;
   color: var(--text-primary);
   text-shadow: 
     2px 2px 4px rgba(0, 0, 0, 0.9),
-    0 0 15px rgba(139, 0, 0, 0.5);
+    1px 1px 2px rgba(139, 0, 0, 0.4),
+    0 0 20px rgba(139, 0, 0, 0.5);
   animation: love-pulse 3s ease-in-out infinite;
   display: inline-block;
-  font-family: 'Georgia', serif;
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  letter-spacing: 0.1em;
 }
 
 .love-word:nth-child(2n) {
@@ -448,15 +465,17 @@ body, html {
 
 .brown-title {
   font-size: 2.5rem;
-  font-weight: 700;
+  font-weight: 900;
   color: var(--text-primary);
   text-transform: uppercase;
-  letter-spacing: 0.4em;
+  letter-spacing: 0.2em;
   margin-bottom: 0.8rem;
   text-shadow: 
-    2px 2px 4px rgba(0, 0, 0, 0.9),
-    0 0 20px rgba(139, 0, 0, 0.4);
-  font-family: 'Georgia', serif;
+    3px 3px 6px rgba(0, 0, 0, 0.9),
+    1px 1px 2px rgba(139, 0, 0, 0.5),
+    0 0 25px rgba(139, 0, 0, 0.4);
+  font-family: 'Cinzel Decorative', 'Uncial Antiqua', serif;
+  font-variant: small-caps;
   animation: brown-glow 4s ease-in-out infinite;
 }
 
@@ -477,8 +496,10 @@ body, html {
   font-size: 1.2rem;
   color: var(--text-dim);
   font-style: italic;
-  letter-spacing: 0.15em;
+  letter-spacing: 0.2em;
   text-transform: lowercase;
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 400;
 }
 
 .brown-text {
@@ -514,7 +535,9 @@ body, html {
   color: var(--text-dim);
   font-style: italic;
   margin-bottom: 1.5rem;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.15em;
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 400;
 }
 
 .signature-name {
@@ -522,12 +545,15 @@ body, html {
   font-weight: 700;
   color: var(--text-primary);
   text-shadow: 
-    2px 2px 4px rgba(0, 0, 0, 0.9),
-    0 0 20px rgba(139, 0, 0, 0.4);
+    3px 3px 6px rgba(0, 0, 0, 0.9),
+    1px 1px 2px rgba(139, 0, 0, 0.5),
+    0 0 25px rgba(139, 0, 0, 0.4);
   margin-bottom: 1.5rem;
   animation: signature-glow 4s ease-in-out infinite;
-  font-family: 'Georgia', serif;
-  letter-spacing: 0.2em;
+  font-family: 'Cinzel Decorative', 'Uncial Antiqua', serif;
+  letter-spacing: 0.15em;
+  font-variant: small-caps;
+  font-style: normal;
 }
 
 @keyframes signature-glow {
